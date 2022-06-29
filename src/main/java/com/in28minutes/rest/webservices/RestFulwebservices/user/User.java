@@ -8,6 +8,11 @@ public class User {
 	private String name;
 	private String birthDate;
 	//srikanth
+	
+	protected User()
+	{
+		
+	}
 	public Integer getId() {
 		return id;
 	}
