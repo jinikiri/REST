@@ -23,11 +23,14 @@ public class userResource {
 	@GetMapping("/users/{id}")
 	public User retrieveUser(@PathVariable int id)
 	{
+		
+		//ss
 		return service.findone(id);
 	}
 	@PostMapping("/users")
 	public void createUser(@RequestBody User user)
 	{
+		
 		User saveuser=service.save(user);
 		
 	}

@@ -32,6 +32,7 @@ public class UserDao {
 	}
 	public User findone(int id)
 	{
+		//ds
 		for(User user:users)
 		{
 			if(user.getId()==id)
