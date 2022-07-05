@@ -2,9 +2,11 @@ package com.in28minutes.rest.webservices.RestFulwebservices.user;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @Component
@@ -39,6 +41,23 @@ public class UserDao {
 			{
 				return user;
 			}
+		}
+		return null;
+	}
+	
+	public User deleteByID(@PathVariable int id)
+	{
+		
+		//ss
+		Iterator<User> iterator=users.iterator();
+		while(iterator.hasNext())
+		{
+		User user= iterator.next();
+		if(user==null)
+			iterator.remove();
+			return user;
+		
+		
 		}
 		return null;
 	}
